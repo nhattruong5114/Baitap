@@ -2,9 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Bai1</title>
 </head>
+
 <body>
-$END$
+
+<input id="so1" type="number"> + <input id="so2" type="number">
+= <input id="check" type="number">
+<button onclick="calculate()">check</button>
+<br>
+<img id="hinh" src="">
+
+
+
+
 </body>
+<script>
+  /* window.alert("hello")
+   console.log("hello w")
+  */
+
+  function calculate(){
+    /*
+    let a = Number(document.getElementById("so1").value)
+    let b = Number(document.getElementById("so2").value)
+    document.getElementById("tong").innerHTML = a + b
+    */
+    var n1, n2 , c
+    n1 = Number(document.getElementById("so1").value)
+    console.log("number")
+    if(n1 ==''){
+      n1 = 0;
+    }
+    console.log("gia tri cua o 1 :",n1)
+    n2 = Number(document.getElementById("so2").value)
+    if(n2 ==''){
+      n2 = 0;
+    }
+    console.log("gia tri cua o 2 :",n2)
+    c = Number(document.getElementById("check").value)
+    if(c ==''){
+      c = 0;
+    }
+
+    if(n1+n2===c){
+      document.getElementById("higitnh").src="../img/photo_2023-04-20_21-05-39 (2).jpg"
+    } else if (n1+n2!==c){
+      document.getElementById("hinh").src="../img/photo_2023-04-20_21-05-39.jpg"
+    }
+
+  }
+
+
+</script>
 </html>
