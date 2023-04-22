@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<input id="a" type="number"> X<sup>2</sup> + <input id="b" type="number"> X + <input id="c" type="number"> = 0
+<button onclick="tinh()" >Giai</button>
+<br>
+<span id="nghiem1"></span>
+<br>
+<span id="nghiem2"></span>
+
+
+</body>
+<script>
+    function tinh(){
+        var a1 , b1, c1 , x1 , x2, tg
+        a1 = Number(document.getElementById("a").value)
+
+        b1 = Number(document.getElementById("b").value)
+
+        c1 = Number(document.getElementById("c").value)
+
+        tg = (b1*b1) - (4*a1*c1);
+
+        if (tg<0) {
+            document.getElementById("nghiem1").innerHTML="Phuong Trinh Vo Nghiem"
+        }
+        if (tg>0){
+            x1=(-b1+Math.sqrt(tg))/(a1*2);
+            x2=(-b1-Math.sqrt(tg))/(a1*2);
+                document.getElementById("nghiem1").innerHTML="Phuong Trinh co nghiem x1 =" + x1
+
+            document.getElementById("nghiem2").innerHTML="Phuong Trinh co nghiem x2 =" + x2
+        }
+        if (tg=0){
+            x1=-b1/(2*a1);
+            document.getElementById("nghiem2").innerHTML="Phuong Trinh co 1 nghiem x =" + x1
+        }
+    }
+
+</script>
+</html>
