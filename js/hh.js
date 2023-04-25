@@ -35,16 +35,21 @@ let text = man["ageAttr"]
         document.getElementById("text-demo").innerHTML = text*/
 
 function tinh(){
+
     var so = Number(document.getElementById("nam").value)
     console.log("nam sinh " + so)
     var d = new Date();
     var y = d.getFullYear();
-    document.getElementById("namht").innerHTML = y
-    console.log("nam hien tai " + y)
-    var h
-    h = y - so;
-    console.log("so tuoi " + h)
-    document.getElementById("sonam").innerHTML = h
+    if (so<y) {
+
+        console.log("nam hien tai " + y)
+        var h
+        h = y - so;
+        console.log("so tuoi " + h)
+        document.getElementById("sonam").innerHTML = h + " tuoi"
+    } else {
+        document.getElementById("sonam").innerHTML = "Nhap sai, nhap lai nam sinh nho hon nam hien tai la :" + y
+    }
 
 
 }
