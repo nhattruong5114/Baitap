@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StopWatch</title>
+</head>
+<body>
+<h1>Stop Watch</h1>
+<span id="time1">0</span> : <span id="time2">0</span> : <span id="time3">0</span>
+<br>
+<span id="gio"></span>
+<br>
+<button onclick="start()">Start</button>
+<button onclick="clearInterval(he)">Stop</button>
+<button onclick="reset()">Reset</button>
+
+</body>
+<script>
+    var he
+    function start(){
+        var t=0,m=0,h=0
+        clearInterval(he)
+        document.getElementById("time3").innerHTML = t
+        document.getElementById("time2").innerHTML = m
+        document.getElementById("time1").innerHTML = h
+
+        he = setInterval(dem,10)
+        function dem(){
+            t++;
+            if (t<100) {
+                document.getElementById("time3").innerHTML = t
+            } else {
+                t=0
+                document.getElementById("time3").innerHTML = t
+                m=m+1
+                if (m < 60) {
+                    document.getElementById("time2").innerHTML = m
+                } else {
+                    m=0
+                    document.getElementById("time2").innerHTML = m
+                    h=h+1
+                    document.getElementById("time1").innerHTML = h
+
+                }
+            }
+        }
+
+
+
+    }
+
+    function reset(){
+        clearInterval(he)
+        document.getElementById("time1").innerHTML = 0
+        document.getElementById("time2").innerHTML = 0
+        document.getElementById("time3").innerHTML = 0
+    }
+</script>
+
+
+</html>
+
